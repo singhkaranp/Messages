@@ -24,7 +24,12 @@ class MessageViewController: MessagesViewController, MessagesDisplayDelegate, Me
         messageList.append(Messages(sender: currentUser, messageId: "1", sentDate: Date().addingTimeInterval(-86400), kind: .text("Hey, What's up?")))
         messageList.append(Messages(sender: otherUser, messageId: "2", sentDate: Date().addingTimeInterval(-76400), kind: .text("Nothing much, what about you?")))
         messageList.append(Messages(sender: currentUser, messageId: "3", sentDate: Date().addingTimeInterval(-66400), kind: .text("I just bought a new car - a BMW")))
-        messageList.append(Messages(sender: otherUser, messageId: "4", sentDate: Date().addingTimeInterval(-56400), kind: .text("That is awesome, Congratulations!")))
+        messageList.append(Messages(sender: currentUser, messageId: "3", sentDate: Date().addingTimeInterval(-66400), kind: .photo(Media(url: nil, image: UIImage(named: "bmw"), placeholderImage: UIImage(named: "bmw")!, size: CGSize(width: 200, height: 200)))))
+        
+        
+        messageList.append(Messages(sender: otherUser, messageId: "4", sentDate: Date().addingTimeInterval(-56400), kind: .text("That is awesome, Congratulations! By the way, i bought a car myself")))
+        
+        messageList.append(Messages(sender: otherUser, messageId: "4", sentDate: Date().addingTimeInterval(-56400), kind: .photo(Media(url: nil, image: UIImage(named:"mercedes"), placeholderImage: UIImage(named:"mercedes")!, size: CGSize(width: 200, height: 200)))))
         
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self

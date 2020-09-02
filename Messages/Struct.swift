@@ -14,7 +14,6 @@ struct Sender: SenderType {
     var senderId: String
     
     var displayName: String
-
 }
 
 struct Messages : MessageType {
@@ -26,4 +25,14 @@ struct Messages : MessageType {
     
     var kind: MessageKind
     
+}
+
+struct Media : MediaItem {
+    var url: URL?
+    
+    var image: UIImage?
+    
+    var placeholderImage: UIImage
+    
+    var size: CGSize
 }
